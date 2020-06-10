@@ -7,7 +7,7 @@ function previosNumber(req, res) {
     try {
         res.send({result: fibonacci.previousNumber(num)});
     } catch (error) {
-        res.send({result: 'Error'});
+        res.status(400).send({result: 'Formato de entrada invalido'})
     }
 }
 
